@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
+import { LandingRoutingModule } from './landing-routing.module';
 import { AntDesignModules } from "../../core/modules/antdesign.module";
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HomeComponent
+  ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    LandingRoutingModule,
     AntDesignModules
   ]
 })
-export class AuthModule { }
+export class LandingModule { }

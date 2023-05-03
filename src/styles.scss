@@ -1,1 +1,291 @@
-/* You can add global styles to this file, and also import other style files */
+//  IMPORTS
+
+@import "assets/styles/colours";
+@import "assets/theme/light-theme";
+@import "assets/theme/dark-theme";
+
+//  Fonts
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Source+Code+Pro&display=swap');
+
+/* Usage
+font-family: 'Quicksand', sans-serif;
+font-family: 'Source Code Pro', monospace;
+ */
+
+// Mode
+
+body.dark {
+  @include darken();
+}
+body.light {
+  @include lighten();
+}
+
+/* Scroll Bar Styling */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary2;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary5;
+}
+
+
+//.btn-1 {
+//  background-image: linear-gradient(to right, $primary4 0%, $secondary5 100%);
+//  color: white;
+//}
+
+//  HEADINGS
+h1, h2, h3, h4, h5, h6 {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: Quicksand, sans-serif !important;
+}
+
+button {
+  font-family: 'Source Code Pro', monospace !important;
+}
+
+/*
+  NAVBAR
+ */
+
+.top-nav {
+  padding: 0px;
+  //background-color: #55b8e1;
+  background-color: $tertiary2;
+  color: rgb(234, 214, 220);
+}
+
+.top-nav-item {
+  color: rgb(234, 214, 220);
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  transition-duration: 0.5s;
+}
+
+.top-nav-item:hover {
+  color: #fff;
+}
+
+.nav-item {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+}
+
+.navbar-brand {
+  color: $secondary2;
+  font-family: Quicksand, sans-serif;
+  font-weight: 900;
+}
+
+.bottom-nav {
+  background: rgb(254 253 249);
+}
+
+.top-nav-paragraph {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+}
+
+
+
+
+.bottom-nav-btn {
+  text-align: center;
+  padding: 10px 25px;
+  transition: 0.5s;
+  color: white;
+  display: block;
+  border: none;
+}
+
+.primary-btn {
+  background-color: $secondary2;
+}
+
+.primary-btn:hover {
+  background-color: $secondary1;
+  text-decoration: none;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: rgb(36, 51, 90);
+}
+
+.secondary-btn:hover {
+  background-color: rgb(227, 232, 244);
+}
+
+.alt-btn {
+  background-color: #fff;
+  color: $vs-text;
+  border: 1px solid #d9d9d9;
+}
+
+.navbar-full .dropdown-menu {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.navbar-full .dropdown, .navbar-full .navbar-nav .nav-item.dropdown {
+  position: static !important;
+}
+
+
+.navbar-before .navbar-nav .dropdown-menu:before {
+  content: '';
+  background: #f00;
+  display: block;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.hero-wrapper {
+  padding: 50px;
+}
+
+.hero-area {
+
+}
+
+.carousel-img {
+  max-width: 750px;
+}
+
+.section-title-area {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: $secondary6;
+  color: $secondary2;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.section-banner {
+  padding: 64px 0px;
+}
+
+.resource-banner {
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
+  display: flex;
+  margin: 0px auto;
+  max-width: 1088px;
+  overflow: hidden;
+  padding: 32px 40px 32px 64px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-img {
+  max-width: 300px;
+}
+
+//  HERO SECTION
+.hero-heading {
+  font-size: 50px;
+  color: $secondary2;
+}
+
+.hero-paragraph {
+  font-size: 24px;
+  color: $slate9-light;
+  padding-bottom: 25px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 300;
+}
+
+//  CAROUSEL
+.carousel-image {
+  max-height: 600px;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: $slate9-light;
+}
+
+.carousel-indicators .active {
+  background-color: $secondary2 !important;
+}
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 50px;
+}
+
+.eprep-gradient-text {
+  background-image: linear-gradient(60deg, $secondary2, $tertiary2);
+  background-clip: text;
+  color: transparent;
+}
+
+.main-paragraph {
+  font-family: Quicksand, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
+  color: $slate9-light;
+}
+
+#shadowzzz {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 50vh;
+  line-height: 80vh;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 -70px 70px rgba(0,0,30,.075)!important;
+}

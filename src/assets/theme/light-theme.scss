@@ -1,0 +1,12 @@
+// mixin that enables css variables in light mode
+@import "../styles/colours";
+
+@mixin lighten() {
+  --sideNavBg: #{$white_alt};
+  --bgColor: #{$white_alt};
+  --textColor: #{$textColor_light};
+  --borderColor: #{$borderColor_light};
+  --heading: #{$fontHeadingLight};
+  --paragraph: #{$paragraphLight};
+  --cardBackground: #{$dae-white};
+}

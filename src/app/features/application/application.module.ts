@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
+import { ApplicationRoutingModule } from './application-routing.module';
+
 import { AntDesignModules } from "../../core/modules/antdesign.module";
 
 
@@ -9,8 +10,7 @@ import { AntDesignModules } from "../../core/modules/antdesign.module";
   declarations: [],
   imports: [
     CommonModule,
-    AuthRoutingModule,
-    AntDesignModules
+    ApplicationRoutingModule
   ]
 })
-export class AuthModule { }
+export class ApplicationModule { }

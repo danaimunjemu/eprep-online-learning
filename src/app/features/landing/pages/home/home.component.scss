@@ -1,0 +1,23 @@
+@import "../../../../../assets/styles/colours";
+
+.main-home-area {
+  height: 100%;
+  margin-top: 75px;
+  margin-bottom: 150px;
+}
+
+.hero-left {
+  padding: 0px 75px 50px 75px;
+}
+
+.hero-right {
+
+}
+
+.hero-carousel {
+  //height: calc( 100vh - 162.5px );
+}
+
+.hero-carousel-control{
+  color: $slate12-light !important;
+}

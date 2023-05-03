@@ -1,0 +1,12 @@
+@import "../styles/colours";
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+  --sideNavBg: #{$bgColor_dark};
+  --bgColor: #{$bgColor_dark};
+  --textColor: #{$textColor_dark};
+  --borderColor: #{$borderColor_dark};
+  --heading: #{$fontHeadingDark};
+  --paragraph: #{$paragraphDark};
+  --cardBackground: #{$bgColor_light};
+}
