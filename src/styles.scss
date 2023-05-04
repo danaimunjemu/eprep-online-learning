@@ -223,7 +223,7 @@ button {
   box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
   margin: 0px 30px;
   max-width: 1088px;
-  padding: 60px 40px;
+  padding: 15px 40px;
 }
 
 .banner-img {
@@ -332,5 +332,8 @@ button {
   }
   .hero-wrapper {
     padding: 0px 50px;
+  }
+  .bottom-nav-form {
+    justify-content: space-around;
   }
 }
