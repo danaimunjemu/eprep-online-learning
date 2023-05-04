@@ -1,0 +1,76 @@
+<div class="auth-page-container">
+  <div id="shadowzzz" class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.20s">fundo</div>
+  <div class="auth-container">
+    <div class="row" style="max-width: 100vw">
+      <div class="col-lg-6" style="text-align: center">
+        <a class="navbar-brand underline-hover" routerLink="/landing">fundolab</a>
+        <div class="login-heading">
+          <h1>Welcome back!</h1>
+          <p>Let's continue where we left off</p>
+        </div>
+        <img src="/assets/images/illustrations/Login-amico-orange.svg" alt="" class="auth-img">
+      </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="login-form">
+
+          <!--    Username Input    -->
+          <nz-form-item>
+            <nz-input-group [nzPrefix]="prefixTemplateUser">
+              <input type="text" nz-input placeholder="Enter your username" />
+            </nz-input-group>
+            <ng-template #prefixTemplateUser>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a5 5 0 1 0 5 5a5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3a3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"/></svg>
+              </span>
+            </ng-template>
+          </nz-form-item>
+
+
+          <!--    Password Input    -->
+          <nz-form-item>
+            <nz-input-group [nzPrefix]="prefixTemplatePassword" [nzSuffix]="suffixTemplate">
+              <input
+                [type]="passwordVisible ? 'text' : 'password'"
+                nz-input
+                placeholder="input password"
+                [(ngModel)]="password"
+              />
+            </nz-input-group>
+            <ng-template #prefixTemplatePassword>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722c0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"/></svg>
+              </span>
+            </ng-template>
+            <ng-template #suffixTemplate>
+              <span *ngIf="passwordVisible" (click)="passwordVisible = !passwordVisible">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3c1.641 0 3-1.358 3-3c0-1.641-1.359-3-3-3z"/><path fill="currentColor" d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316l-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5c-.504 1.158-2.578 5-7.926 5z"/></svg>
+              </span>
+              <span *ngIf="!passwordVisible" (click)="passwordVisible = !passwordVisible">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.998c-1.836 0-3.356.389-4.617.971L3.707 2.293L2.293 3.707l3.315 3.316c-2.613 1.952-3.543 4.618-3.557 4.66l-.105.316l.105.316C2.073 12.382 4.367 19 12 19c1.835 0 3.354-.389 4.615-.971l3.678 3.678l1.414-1.414l-3.317-3.317c2.614-1.952 3.545-4.618 3.559-4.66l.105-.316l-.105-.316c-.022-.068-2.316-6.686-9.949-6.686zM4.074 12c.103-.236.274-.586.521-.989l5.867 5.867C6.249 16.23 4.523 13.035 4.074 12zm9.247 4.907l-7.48-7.481a8.138 8.138 0 0 1 1.188-.982l8.055 8.054a8.835 8.835 0 0 1-1.763.409zm3.648-1.352l-1.541-1.541c.354-.596.572-1.28.572-2.015c0-.474-.099-.924-.255-1.349A.983.983 0 0 1 15 11a1 1 0 0 1-1-1c0-.439.288-.802.682-.936A3.97 3.97 0 0 0 12 7.999c-.735 0-1.419.218-2.015.572l-1.07-1.07A9.292 9.292 0 0 1 12 6.998c5.351 0 7.425 3.847 7.926 5a8.573 8.573 0 0 1-2.957 3.557z"/></svg>
+              </span>
+            </ng-template>
+          </nz-form-item>
+
+          <!--  Login Button   -->
+          <nz-form-item style="margin-top: 16px">
+            <button type="button" class="btn btn-light bottom-nav-btn primary-btn" routerLink="/auth/check-mail" style="width: 100%">
+              Sign Up
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m7 17.013l4.413-.015l9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583l-1.597 1.582l-1.586-1.585l1.594-1.58zM9 13.417l6.03-5.973l1.586 1.586l-6.029 5.971L9 15.006v-1.589z"/><path fill="currentColor" d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01c-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"/></svg>
+            </button>
+          </nz-form-item>
+
+
+          <p style="text-align: center">
+            - or -
+          </p>
+
+          <button nz-button nzType="default" style="width: 100%">
+            <img src="/assets/images/logos/google-logo.webp" style="max-width: 20px; margin-right: 10px" alt="">
+             Sign Up with Google
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

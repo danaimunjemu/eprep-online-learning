@@ -31,6 +31,7 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 
 const modules = [
@@ -65,7 +66,8 @@ const modules = [
   NzDrawerModule,
   NzCheckboxModule,
   NzSwitchModule,
-  NzListModule
+  NzListModule,
+  NzDividerModule
 ];
 
 @NgModule({
