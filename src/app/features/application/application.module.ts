@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ApplicationRoutingModule } from './application-routing.module';
 
 import { AntDesignModules } from "../../core/modules/antdesign.module";
+import { AppComponent } from './shared/app/app.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     CommonModule,
     ApplicationRoutingModule
