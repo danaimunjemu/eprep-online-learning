@@ -910,3 +910,25 @@ nz-sider {
   background-color: var(--formInput);
   border: 1px solid var(--formInput);
 }
+
+.filter-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 30px;
+  float: left;
+  background: rgb(255 255 255/60%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
+  position: relative;
+  z-index: 1;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0px;
+}
+
+.ant-collapse-content {
+  background-color: transparent;
+  border: none;
+}
