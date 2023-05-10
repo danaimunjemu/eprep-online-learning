@@ -441,7 +441,8 @@ input {
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  box-shadow: 0 13px 57px -15px rgb(64 83 111/15%);
+  //box-shadow: 0 13px 57px -15px rgb(64 83 111/15%);
+  box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
   background: #fff;
   border-radius: 10px;
   padding: 5px;
@@ -679,3 +680,233 @@ a:hover {
   color: white;
 }
 
+
+/*
+  APPLICATION STYLES
+*/
+
+.app-container{
+  position: relative;
+  max-height: 100vh;
+  min-height: 100vh;
+}
+
+/* Application Layout Formatting */
+.ant-layout {
+  min-height: 100vh;
+  max-height: 100vh;
+  background: var(--bgColor);
+}
+
+.inner-content {
+  max-height: calc( 100vh - 118px );
+  min-height: calc( 100vh - 118px );
+  overflow:auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.ant-layout-sider {
+  background: var(--sideNavBg);
+}
+
+.ant-layout-sider-trigger {
+  border-radius: 0px 0px 50px 0px;
+  background: transparent;
+  color: $secondary2;
+}
+
+.side-bar-logo {
+  padding: 30px 25px 25px 25px;
+}
+
+.logo-nav {
+  width: 75px;
+  //height: auto;
+}
+
+.logo-nav-sm {
+  max-width: 40px;
+}
+
+nz-sider {
+  transition-duration: 5s;
+  /* So side-nav is on top of the top nav bar */
+  position: relative;
+  z-index: 2000;
+}
+
+.desktop-sider {
+  position: absolute;
+  right: -8px;
+  top: 40vh;
+  background-color: var(--sideNavBg);
+  transition-duration: 0.5s;
+  border-radius: 50%;
+  width: 50px;
+  color: var(--textColor);
+  height: 50px;
+}
+
+.desktop-sider:hover{
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+  background: transparent;
+  color: var(--textColor);
+  overflow: auto;
+}
+
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a, .ant-menu-dark .ant-menu-item > span > a {
+  color: var(--textColor);
+  font-size: 14px;
+}
+
+.ant-menu-dark .ant-menu-item:hover, .ant-menu-dark .ant-menu-item-active, .ant-menu-dark .ant-menu-submenu-active, .ant-menu-dark .ant-menu-submenu-open, .ant-menu-dark .ant-menu-submenu-selected, .ant-menu-dark .ant-menu-submenu-title:hover {
+  color: var(--primary-dark);
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  font-family: 'Quicksand', sans-serif;
+  color: $secondary2;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.ant-menu-item-selected > span {
+  color: var(--secondary) !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon, .ant-menu-dark .ant-menu-item-selected .anticon {
+  color: var(--primary-dark);
+}
+
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon + span, .ant-menu-dark .ant-menu-item-selected .anticon + span {
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+.ant-menu-item-selected:after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: $secondary2;
+  border-radius: 0px 20px 20px 0px;
+  transition: all .25s ease;
+  z-index: 60;
+}
+
+/* Nav Arrow */
+.ant-menu-dark .ant-menu-item:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-item-active > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-submenu-active > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-submenu-open > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-submenu-selected > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-submenu-title:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-item:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-item-active > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-submenu-active > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-submenu-open > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-submenu-selected > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-submenu-title:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow::before {
+  background: $secondary2;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after, .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after, .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after, .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before, .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before, .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
+  background: $secondary2;
+}
+
+.mode-toggler {
+  padding-right: 20px;
+}
+
+.dark-mode-toggle-icon {
+  max-width: 15px;
+}
+
+.dashboard-avatar {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.dashboard-avatar:hover{
+  cursor: pointer;
+}
+
+.dashboard-user-details {
+  margin-left: 10px;
+}
+
+.dashboard-username {
+  color: $slate11-light;
+  font-size: 14px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 900;
+}
+
+.dashboard-email {
+  color: $slate10-light;
+  font-size: 12px;
+  font-family: Poppins, sans-serif;
+}
+
+.dashboard-dropdown-icon {
+  margin-right: 10px;
+}
+
+.dashboard-card-header {
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.side-nav-avatar {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.side-nav-username {
+  text-align: center;
+}
+
+.side-nav-menu-items {
+  padding: 25px;
+}
+
+.side-nav-header {
+  font-size: 18px;
+  font-family: Quicksand, sans-serif;
+  color: $slate11-light;
+}
+
+.side-nav-item {
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+}
+
+.spacer-xs {
+  margin-top: 5px;
+}
+
+.spacer-sm {
+  margin-top: 10px;
+}
+
+.spacer-md {
+  margin-top: 15px;
+}
+
+.spacer-lg {
+  margin-top: 25px;
+}
+
+.spacer-xl {
+  margin-top: 50px;
+}
+
+/*
+  NG ZORRO STYLES
+ */
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  min-width: 300px;
+  background-color: var(--formInput);
+  border: 1px solid var(--formInput);
+}

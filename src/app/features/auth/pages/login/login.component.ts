@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
+import {NotificationService} from "../../../../core/services/notification.service";
 
 @Component({
   selector: 'app-login',
@@ -7,8 +9,24 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(
+    private router: Router,
+    private notificationService: NotificationService
+  ) {
+  }
+
   //  Variables
   passwordVisible = false;
   password?: string;
+
+  login() {
+    this.notificationService.createNotification({
+      type: 'success',
+      title: 'Login Successful',
+      content: 'You can start growing your oaks!'
+    });
+    setTimeout(()=> this.router.navigateByUrl('/app'), 1000);
+  }
+
 
 }

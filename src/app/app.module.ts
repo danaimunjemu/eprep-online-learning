@@ -14,6 +14,7 @@ import {ModeToggleService} from "./core/modules/mode/mode-toggle.service";
 import {MODE_STORAGE_SERVICE, ModeLocalStorageService} from "./core/modules/mode/mode-storage.service";
 import {ServerErrorsInterceptorService} from "./core/services/error-handling/servererrors.service";
 import {HttpConfigInterceptor} from "./core/interceptor/http.interceptor";
+import { AntDesignModules } from "./core/modules/antdesign.module";
 
 registerLocaleData(en);
 
@@ -26,7 +27,8 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AntDesignModules
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

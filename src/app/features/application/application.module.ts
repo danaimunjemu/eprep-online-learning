@@ -5,6 +5,7 @@ import { ApplicationRoutingModule } from './application-routing.module';
 
 import { AntDesignModules } from "../../core/modules/antdesign.module";
 import { AppComponent } from './shared/app/app.component';
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { AppComponent } from './shared/app/app.component';
   ],
   imports: [
     CommonModule,
-    ApplicationRoutingModule
+    ApplicationRoutingModule,
+    AntDesignModules,
+    FormsModule
   ]
 })
 export class ApplicationModule { }
