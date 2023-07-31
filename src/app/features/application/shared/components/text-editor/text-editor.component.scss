@@ -1,0 +1,25 @@
+
+#editorOptions
+{
+  text-align: right;
+}
+
+.active {
+  background-color : darkgray;
+}
+
+#input {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  background-color: transparent;
+  font-family: "Source Code Pro", monospace !important;
+  font: -moz-field;
+  font: -webkit-small-control;
+  height:50px;
+  overflow: auto;
+}
+
+#input:active, #input:focus {
+  border: none !important;
+  box-shadow: none !important;
+}

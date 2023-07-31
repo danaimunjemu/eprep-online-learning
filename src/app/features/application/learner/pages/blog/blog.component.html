@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Learning Paths</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">For Businesses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Social Impact</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button nz-button nzType="primary" (click)="showModal()">
+          <span>
+            Search Blog
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path stroke-linecap="round" d="m20 20l2 2"/></g></svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzTitle]="modalTitle"
+  [nzContent]="modalContent"
+  [nzFooter]="modalFooter"
+  (nzOnCancel)="handleCancel()"
+>
+  <ng-template #modalTitle>
+    Search Blog
+  </ng-template>
+
+  <ng-template #modalContent>
+    <nz-input-group [nzPrefix]="prefixTemplateUser">
+      <input type="text" nz-input placeholder="Enter keyword" />
+    </nz-input-group>
+    <ng-template #prefixTemplateUser><span nz-icon nzType="search"></span></ng-template>
+  </ng-template>
+
+  <ng-template #modalFooter>
+    <div class="search-blog-footer">
+      <svg class="arrow-keys" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M16 5.25a.75.75 0 0 1 .538.228l4 4.125a.75.75 0 1 1-1.076 1.044L16.75 7.851V18a.75.75 0 0 1-1.5 0V7.85l-2.712 2.797a.75.75 0 1 1-1.076-1.044l4-4.125A.75.75 0 0 1 16 5.25Zm-8 0a.75.75 0 0 1 .75.75v10.15l2.712-2.797a.75.75 0 1 1 1.076 1.044l-4 4.125a.75.75 0 0 1-1.076 0l-4-4.125a.75.75 0 1 1 1.076-1.044l2.712 2.796V6A.75.75 0 0 1 8 5.25Z" clip-rule="evenodd"/></svg>
+      <span class="search-blog-text">navigate</span>
+      <svg class="arrow-keys" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M19.5 6.25a.75.75 0 0 1 .75.75c0 2.244-.952 3.72-2.187 4.609c-1.196.861-2.61 1.141-3.563 1.141H6.31l3.72 3.72a.75.75 0 1 1-1.06 1.06l-5-5a.75.75 0 0 1 0-1.06l5-5a.75.75 0 1 1 1.06 1.06l-3.72 3.72h8.19c.713 0 1.8-.22 2.687-.859c.848-.61 1.563-1.635 1.563-3.391a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+      <span class="search-blog-text">go</span>
+    </div>
+  </ng-template>
+</nz-modal>

@@ -32,6 +32,9 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+
+
 
 
 const modules = [
@@ -67,7 +70,8 @@ const modules = [
   NzCheckboxModule,
   NzSwitchModule,
   NzListModule,
-  NzDividerModule
+  NzDividerModule,
+  NzSliderModule
 ];
 
 @NgModule({

@@ -15,12 +15,14 @@ import {MODE_STORAGE_SERVICE, ModeLocalStorageService} from "./core/modules/mode
 import {ServerErrorsInterceptorService} from "./core/services/error-handling/servererrors.service";
 import {HttpConfigInterceptor} from "./core/interceptor/http.interceptor";
 import { AntDesignModules } from "./core/modules/antdesign.module";
+import { AngularEditorModule } from '@kolkov/angular-editor';
+
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AntDesignModules
+    AntDesignModules,
+    AngularEditorModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

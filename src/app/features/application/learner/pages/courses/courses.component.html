@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-lg-3 courses-side-bar-container">
     <div class="courses-sidebar">
       <div class="search-area">
         <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
@@ -70,17 +70,36 @@
           </nz-collapse-panel>
         </nz-collapse>
       </div>
+      <div class="filter-pricing-type filter-card mt-1">
+        Price
+        <nz-slider [nzMarks]="marks" nzIncluded nzRange [ngModel]="[26, 37]"></nz-slider>
+      </div>
+
+      <div class="filter-pricing-type filter-card mt-1">
+        Tags
+
+        <nz-select
+          [nzMaxTagCount]="3"
+          [nzMaxTagPlaceholder]="tagPlaceHolder"
+          nzMode="multiple"
+          nzPlaceHolder="Please select"
+          [(ngModel)]="listOfSelectedValue"
+        >
+          <nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
+        </nz-select>
+        <ng-template #tagPlaceHolder let-selectedList>and {{ selectedList.length }} more selected</ng-template>
+      </div>
     </div>
   </div>
-  <div class="col-lg-9">
+  <div class="col-lg-9 courses-main-content-container">
     <div class="">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-xl-4">
           <div class="course-inner">
             <div routerLink="">
               <div class="course-image-box">
                 <div class="course-image">
-                  <img src="/assets/images/01_small-preview-banking-copy.webp" class="course-img" alt="">
+                  <img src="/assets/images/1.webp" class="course-img" alt="">
                 </div>
                 <div class="course-button-container">
                   <a href="" class="course-detail-button">
@@ -117,12 +136,12 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-xl-4">
           <div class="course-inner">
             <div routerLink="">
               <div class="course-image-box">
                 <div class="course-image">
-                  <img src="/assets/images/01_small-preview-banking.webp" class="course-img" alt="">
+                  <img src="/assets/images/2.webp" class="course-img" alt="">
                 </div>
                 <div class="course-button-container">
                   <a href="" class="course-detail-button">
@@ -159,12 +178,516 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-xl-4">
           <div class="course-inner">
             <div routerLink="">
               <div class="course-image-box">
                 <div class="course-image">
-                  <img src="/assets/images/01_small-preview-banking-1.webp" class="course-img" alt="">
+                  <img src="/assets/images/3.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/4.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/5.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/6.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/7.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/8.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/9.jpg" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/10.jpg" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/11.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/12.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/13.webp" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/14.jpg" class="course-img" alt="">
+                </div>
+                <div class="course-button-container">
+                  <a href="" class="course-detail-button">
+                    <span class="course-add-to-card course-button-effect">Details</span>
+                  </a>
+                </div>
+              </div>
+              <div class="course-content">
+                <div class="course-detail">
+                  <h3 class="course-title">Oyun Gaming Lite</h3>
+                  <p class="course-subtitle">Flutter UI Kit Free for Gaming Agency</p>
+                  <div class="course-price-holder">
+                    <div class="course-bottom-info">
+                      <div class="course-category">
+                  <span class="fundo-category">
+                    <a class="fundo-category-a" href="https://iqonic.design/product-category/mobile/flutter/">Flutter</a>
+                  </span>
+                      </div>
+                      <div class="course-price-container">
+                  <span class="course-count">
+                    254
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v6.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </span>
+                        <span class="course-pricing-detail">
+                    <span class="free-course">Free</span>
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="course-inner">
+            <div routerLink="">
+              <div class="course-image-box">
+                <div class="course-image">
+                  <img src="/assets/images/15.webp" class="course-img" alt="">
                 </div>
                 <div class="course-button-container">
                   <a href="" class="course-detail-button">

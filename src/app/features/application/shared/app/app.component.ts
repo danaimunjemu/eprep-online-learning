@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import {Mode} from "../../../../core/modules/mode/mode-toggle.model";
 import {ModeToggleService} from "../../../../core/modules/mode/mode-toggle.service";
 import {Router} from "@angular/router";
@@ -42,5 +42,7 @@ export class AppComponent implements OnInit, OnDestroy{
   logout() {
     setTimeout(()=> this.router.navigateByUrl('/'), 1000);
   }
+
+
 
 }
